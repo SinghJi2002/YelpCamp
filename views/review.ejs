@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/review.css">
+    <title>Star Rating System</title>
+</head>
+<body>
+    <form action="/campground/<%= username %>/<%= id %>/review" method="post" class="review-form">
+
+        <h1>How much out of 5 do you rate your experience??</h1>
+        <div class="star-rating">
+            <input type="radio" name="rating" id="star5" value="5">
+            <label for="star5" class="star">&#9733;</label>
+            
+            <input type="radio" name="rating" id="star4" value="4">
+            <label for="star4" class="star">&#9733;</label>
+
+            <input type="radio" name="rating" id="star3" value="3">
+            <label for="star3" class="star">&#9733;</label>
+            
+            <input type="radio" name="rating" id="star2" value="2">
+            <label for="star2" class="star">&#9733;</label>
+            
+            <input type="radio" name="rating" id="star1" value="1">
+            <label for="star1" class="star">&#9733;</label>
+        </div>
+
+        <h1>Leave Us A Review. What did you like? What are the things we can improve on?</h1>
+        <textarea name="review" id="review" class="review"></textarea>
+
+        <button class="submit-btn">Post</button>
+    </form>
+
+    
+</body>
+</html>

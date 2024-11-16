@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Grounds</title>
+    <link rel="stylesheet" href="/campGround.css">
+</head>
+
+<body>
+    <h1 class="main-title">All Camp Grounds offered By Us</h1>
+    <% if(username=='admin') {%>
+        <button class="button-new"><a href="/campground/<%= username %>/create" class="href-new">Create New Camp Ground</a></button>
+    <% } %>
+    <div class="grid-container">
+        <% for(let camp of campData) { %>
+            <div class="grid-element">
+                <img src="<%= camp.picture  %>" alt="" class="site-pic">
+                <p class="site-name">
+                    <%= camp.title %>
+                </p>
+                <button class="site-details-button"><a href="/campground/<%= username %>/<%= camp._id %>" class="site-details-href">Show Details</a></button>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>

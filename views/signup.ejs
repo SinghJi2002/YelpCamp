@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="/SignupPage.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="login-form">
+            <p class="login-header">Sign Up</p>
+            <form action="/signup" method="post" class="form" enctype="multipart/form-data">
+                <label for="name">
+                    <input type="text" name="name" id="name" class="name" placeholder="Name">
+                </label>
+                <label for="username">
+                    <input type="text" name="username" id="username" class="username" placeholder="Username">
+                </label>
+                <label for="email">
+                    <input type="text" name="email" id="email" class="email" placeholder="Email">
+                </label>
+                <label for="address">
+                    <input type="text" name="address" id="address" class="address" placeholder="Address">
+                </label>
+                <label for="password">
+                    <input type="password" name="password" id="password" class="password" placeholder="Password">
+                </label>
+                <label for="profile">
+                    Upload Your Profile Photo <br>
+                    <input type="file" name="profile" id="profile" class="file">
+                </label>
+                <button class="button">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

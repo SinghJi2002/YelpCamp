@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/showDetails.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="showDetails">
+        <div class="picture-section">
+            <img src="<%= campData_single.picture  %>" alt="" class="main-pic">
+        </div>
+        <div class="information-section">
+            <p class="header"><%= campData_single.title %></p>
+            <p class="subheader"><%= campData_single.location %></p>
+            <div class="information">
+                <div class="sub-information">
+                    <p class="title">Price</p>
+                    <p class="content"><%= campData_single.price %></p>
+                </div>
+                <div class="sub-information">
+                    <p class="title">Percentage Growth In Visits Over Previous Year</p>
+                    <p class="content"><%= campData_single.Percentage_Growth_In_Visits %></p>
+                </div>
+                <div class="sub-information">
+                    <p class="title">Number Of Visits Till Date</p>
+                    <p class="content"><%= campData_single.Number_Of_Visits_Till_Data %></p>
+                </div>
+                <div class="sub-information">
+                    <p class="title">Coordinate</p>
+                    <p class="content"><span class="sub-title">Latitude</span>: <%= campData_single.Longitude %></p>
+                    <p class="content"><span class="sub-title">Longitude</span>: <%= campData_single.Latitude %></p>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="navigation-button"><a href="/campground/<%= username %>" class="navigation-href">Go Back</a></button>
+                <button class="navigation-button"><a href="/campground/<%= username %>/<%= campData_single._id %>/review" class="navigation-href">Write A Review</a></button>
+                <% if(username=='admin') {%>
+                <button class="navigation-button"><a href="/campground/<%= username %>/<%= campData_single._id %>/edit" class="navigation-href">Edit</a></button>
+                <button class="navigation-button"><a href="/campground/<%= username %>/<%= campData_single._id  %>/delete" class="navigation-href">Delete</a></button>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="review-div">
+        <div class="overlay">
+            <p class="review-header">Lets See What Our Travellers Have To Say!!</p>
+            <div class="review-grid">
+                <% if(reviewExists) {%>
+                    <% for(let review of reviewData) {%>
+                    <div class="review-space">
+                        <div class="review-content">
+                            <p class="r-content"><%= review.review %></p>
+                            <p class="r-author"><%= review.username %></p>
+                        </div>
+                    </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

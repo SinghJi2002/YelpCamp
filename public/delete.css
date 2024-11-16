@@ -1,0 +1,26 @@
+body{
+    background-color: #504128;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
+
+form{
+    align-items: center;
+    text-align: center;
+}
+
+form button{
+    color: white;
+    background-color: orange;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 50px;
+}

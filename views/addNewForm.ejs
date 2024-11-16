@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/addNewForm.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Create New Camp Ground</h1>
+    <form action="/campground/<%= username %>/create" method="post">
+        <label for="title">
+            <p>Title</p> 
+            <input type="text" name="title" id="title">
+        </label>
+        <label for="price">
+            <p>Price</p> 
+            <input type="text" name="price" id="price">
+        </label>
+        <label for="city-state">
+            <p>City and State</p> 
+            <input type="text" id="location" name="location">
+        </label>
+        <label for="growth">
+            <p>Percentage Growth In Visits</p> 
+            <input type="text" id="growth" name="growth">
+        </label>
+        <label for="total">
+            <p>Number Of Visits Till Data</p> 
+            <input type="text" id="total" name="total">
+        </label>
+        <label for="longitude">
+            <p>Longitude</p> 
+            <input type="text" id="longitude" name="longitude">
+        </label>
+        <label for="latitude">
+            <p>Latitude</p>
+            <input type="text" id="latitude" name="latitude">
+        </label>
+        <div class="div-submit">
+            <button class="submit">Submit</button>
+        </div>
+    </form>
+    <button class="back-button"><a href="/campground/<%= username %>" class="back-href">Go Back</a></button>
+</body>
+
+</html>

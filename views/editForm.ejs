@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/editForm.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Edit Camp Ground Record</h1>
+    <form action="/campground/<%= username %>/<%= single_data._id  %>/edit?_method=PUT" method="post">
+        <label for="title">
+            <p>Title</p>
+            <input type="text" name="title" id="title" value="<%= single_data.title  %>">
+        </label>
+        <label for="price">
+            <p>Price</p>
+            <input type="text" name="price" id="price" value="<%= single_data.price  %>">
+        </label>
+        <label for="city-state">
+            <p>Location</p>
+            <input type="text" id="location" name="location" value="<%= single_data.location  %>">
+        </label>
+        <label for="growth">
+            <p>Percentage Growth In Visits</p>
+            <input type="text" id="growth" name="growth" value="<%= single_data.Percentage_Growth_In_Visits%>">
+        </label>
+        <label for="total">
+            <p>Number Of Visits Till Data</p>
+            <input type="text" id="total" name="total" value="<%= single_data.Number_Of_Visits_Till_Data %>">
+        </label>
+        <label for="longitude">
+            <p>Longitude</p>
+            <input type="text" id="longitude" name="longitude" value="<%= single_data.Longitude  %>">
+        </label>
+        <label for="latitude">
+            <p>Latitude</p>
+            <input type="text" id="latitude" name="latitude" value="<%= single_data.Latitude  %>">
+        </label>
+        <button class="submit">Submit</button>
+    </form>
+    <button class="back-button"><a href="/campground/<%= username %>/<%= single_data._id %>" class="back-href">Go Back</a></button>
+</body>
+
+</html>
