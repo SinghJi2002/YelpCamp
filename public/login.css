@@ -43,10 +43,12 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px;
-    row-gap: 60px;
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+    row-gap: 30px;
     border-radius: 30px;
-    padding: 20px 20px;
+    padding: 20px;
     z-index: 3;
 }
 .form{
@@ -65,12 +67,14 @@ video {
     border-right: none;
     border-top: none;
     outline: none;
-    height: 25px;
-    width: 450px;
+    width: 350px;
+    max-width: 400px;
+    height: 35px;
+    padding: 10px;
 }
 .button{
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 45px;
     border-radius: 20px;
     border: none;
     outline: none;
@@ -83,4 +87,25 @@ video {
 }
 .form input::placeholder{
 
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        max-width: 300px;
+        row-gap: 15px;
+        padding: 15px;
+    }
+
+    .login-header {
+        font-size: 22px;
+    }
+
+    .form input {
+        max-width: 250px;
+    }
+
+    .button {
+        width: 80px;
+        height: 35px;
+    }
 }

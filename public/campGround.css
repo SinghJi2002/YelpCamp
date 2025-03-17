@@ -4,9 +4,9 @@ body{
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create 3 equal columns */
     gap: 20px; /* Space between the grid items */
-    padding: 20px 75px; /* Padding around the grid */
+    padding: 20px; /* Padding around the grid */
 }
 .main-title{
     text-align: center;
@@ -18,9 +18,13 @@ body{
 .button-new{
     background-color: orange;
     border: none;
-    height: 50px;
-    width: 300px;
     border-radius: 20px;
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+    height: 50px;
+    font-size: 18px;
 }
 .href-new{
     text-decoration: none;
@@ -34,33 +38,81 @@ body{
     position: relative;
     border-radius: 50px;
     padding-bottom: 20px;
+    text-align: center;
 }
 .site-pic{
-    width: 400px;
-    height: 550px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 50px;
     z-index: 0;
 }
 .site-name{
-    position: absolute;
+    position: relative;
     color: white;
     font-weight: bold;
-    font-size: 30px;
-    top: 450px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 5px;
 }
 .site-details-button{
     background-color: orange;
     border: none;
     height: 40px;
-    width: 150px;
+    width: 90%;
+    max-width: 200px;
     border-radius: 20px;
     margin-left: 10px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 .site-details-href{
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 32px;
+    }
+
+    .button-new {
+        font-size: 16px;
+    }
+
+    .site-name {
+        font-size: 20px;
+    }
+
+    .site-details-button {
+        width: 80%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .button-new {
+        font-size: 14px;
+        height: 45px;
+    }
+
+    .site-name {
+        font-size: 18px;
+    }
+
+    .site-details-button {
+        width: 100%;
+        font-size: 12px;
+    }
 }

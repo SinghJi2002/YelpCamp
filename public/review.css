@@ -4,13 +4,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .review-form {
     display: flex;
     row-gap: 5px;
     flex-direction: column;
-    width: 450px;
+    width: 90%;
+    max-width: 450px;
     margin: 0 auto;
     padding: 20px;
     background-color:  #fdf6ea;
@@ -20,6 +23,8 @@ body{
 
 .review {
     height: 120px;
+    width: 95%;
+    max-width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -31,6 +36,10 @@ body{
 .star-rating {
     text-align: center;
     margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
 }
 
 .star-rating input[type="radio"] {
@@ -65,4 +74,44 @@ body{
 
 .submit-btn:hover {
     background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-form {
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .review {
+        height: 100px;
+    }
+
+    .star-rating label {
+        font-size: 26px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-form {
+        max-width: 350px;
+        padding: 10px;
+    }
+
+    .review {
+        height: 90px;
+    }
+
+    .star-rating label {
+        font-size: 24px;
+    }
+
+    .submit-btn {
+        font-size: 13px;
+        padding: 8px;
+    }
 }
