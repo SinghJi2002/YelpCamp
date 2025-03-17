@@ -1,5 +1,7 @@
 const mongoose=require("mongoose")
 const campGround=require("../models/campgroundSchema")
+require('dotenv').config()
+const dbURL=process.env.DB_URL
 mongoose.connect("mongodb://localhost:27017/yelpCamp").then(()=>{
     console.log('connected')
 }).catch((err)=>{

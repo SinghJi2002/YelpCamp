@@ -13,8 +13,10 @@ const upload=multer({storage})
 const campgroundSchema=require("./models/campgroundSchema")
 const userSchema=require('./models/userSchema')
 const reviewsSchema=require('./models/reviewsSchema')
-
-mongoose.connect("mongodb://localhost:27017/yelpCamp").then(()=>{
+const req = require("express/lib/request.js")
+const dbURL=process.env.DB_URL
+//mongodb://localhost:27017/yelpCamp
+mongoose.connect(dbURL).then(()=>{
     console.log("Connected")
 }).catch((err)=>{
     console.log(err)
